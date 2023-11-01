@@ -4,6 +4,8 @@ import java.awt.CardLayout;
 
 import javax.swing.*;
 
+import com.sist.friendship.FoodFindPanel;
+
 //import com.sist.client.HomePanel;
 
 //import com.sist.firendship.FoodCategoryListPanel;
@@ -18,6 +20,7 @@ public class ControllPanel extends JPanel{
   public BoardUpdatePanel bup;
   public FoodDetailPanel fdp;
   public FoodCategoryListPanel fcp;
+  public FoodFindPanel ffp;
   
   
   public CardLayout card=new CardLayout();
@@ -33,6 +36,7 @@ public class ControllPanel extends JPanel{
 	  bup=new BoardUpdatePanel(this);
 	  fdp=new FoodDetailPanel(this);
 	  fcp=new FoodCategoryListPanel(this);
+	  ffp=new FoodFindPanel(this);
 	  setLayout(card);
 	  add("home",hp);
 	  add("chat",cp);
@@ -44,6 +48,7 @@ public class ControllPanel extends JPanel{
 	  add("update",bup);
 	  add("fdetail",fdp);
 	  add("catefood",fcp);
+	  add("find",ffp);
 	  // => @RequestMapping("update.jsp") => Spring / Spring=Boot
 	  // => app.get("update") => NodeJS
   }
